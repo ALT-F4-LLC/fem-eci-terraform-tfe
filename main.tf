@@ -4,7 +4,7 @@ module "team" {
 
   name              = "fem-eci-team"
   organization_name = var.organization_name
-  usernames         = ["<your-username>"]
+  usernames         = var.organization_usernames
 }
 
 module "project" {
