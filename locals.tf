@@ -53,7 +53,7 @@ locals {
       ]
     }
 
-    "fem-eci-aws-cluster" = {
+    "fem-eci-aws-cluster-prod" = {
       description         = "Automation for AWS cluster resources."
       execution_mode      = "remote"
       project_id          = module.project["fem-eci-project"].id
@@ -68,7 +68,7 @@ locals {
         {
           category = "terraform"
           key      = "environment"
-          value    = "dev"
+          value    = "prod"
         },
         {
           category = "terraform"
