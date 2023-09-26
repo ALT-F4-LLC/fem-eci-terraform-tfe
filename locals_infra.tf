@@ -9,7 +9,7 @@ locals {
   cluster = {
     "fem-eci-<your-name>" = {
       domain      = "<your-top-level-domain>"
-      environment = "dev"
+      environment = "prod"
       vpc_name    = "fem-eci"
     }
   }
