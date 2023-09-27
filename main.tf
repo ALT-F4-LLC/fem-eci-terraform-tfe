@@ -1,12 +1,3 @@
-module "team" {
-  source  = "ALT-F4-LLC/team/tfe"
-  version = "0.2.0"
-
-  name              = "fem-eci-team"
-  organization_name = var.organization_name
-  usernames         = var.organization_usernames
-}
-
 module "project" {
   source  = "ALT-F4-LLC/project/tfe"
   version = "0.4.0"
@@ -14,7 +5,6 @@ module "project" {
   description       = "Example description of project"
   name              = "fem-eci-project"
   organization_name = var.organization_name
-  team_ids          = [module.team.id]
 }
 
 module "workspace" {
