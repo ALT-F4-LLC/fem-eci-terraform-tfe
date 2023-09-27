@@ -1,14 +1,3 @@
-module "team" {
-  for_each = local.team
-
-  source  = "ALT-F4-LLC/team/tfe"
-  version = "0.2.0"
-
-  name              = each.key
-  organization_name = var.organization_name
-  usernames         = each.value.usernames
-}
-
 module "project" {
   for_each = local.project
 
@@ -18,7 +7,6 @@ module "project" {
   description       = each.value.description
   name              = each.key
   organization_name = var.organization_name
-  team_ids          = each.value.team_ids
 }
 
 module "workspace" {
